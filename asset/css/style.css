@@ -221,7 +221,9 @@ background-color: #7E57C2;
 }
 
 
-.shopCategories{background-color: #fff;}
+.shopCategories{background-color: #fff;
+    height: 100vh;
+    overflow: hidden;}
 .shopCategories .shop_wrap{
     padding: 25px 25px 0;
 }
