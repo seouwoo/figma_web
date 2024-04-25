@@ -1,0 +1,325 @@
+@charset "UTF-8";
+
+/* 
+단위
+vw --> viewport의 넓이  100vw --> viewport의 넓이의 100%
+vh --> viewport의 높이  100vh --> viewport의 높이의 100% 
+rem --> root의 단위에 따라가는 단위(html)
+em--> 내가 가진 단위에 따라가는 단위
+*/
+
+
+/* header */
+header{background-color: #7E57C2; height:50px;
+padding: 0 25px; box-sizing: border-box;
+display: flex;justify-content: space-between;
+align-items: center;
+}
+header h2{color: #fff; text-align: center; 
+    font-size: 17px;line-height: 50px;}
+
+
+
+/* welcome */
+.welcome{
+    position: relative;
+    height: 100vh;
+    background: url(../images/welcome_bg.png) no-repeat center top;
+    background-size: cover;
+    padding-top: 134px;
+    box-sizing: border-box;
+    
+}
+
+.welcome h1{color: #fff;
+     font-size: 32px; line-height: 52px;
+    margin-bottom: 127px;
+    }
+.welcome p{
+    color: #fff; font-size: 21px; line-height: 34px;
+    max-width: 300px; margin: 0 auto;
+    width: 100%;
+}
+
+.welcome .sign_links{position: absolute;
+    bottom: 40px; left: 25px;
+    width: calc(100% - 50px);
+ 
+}
+.welcome .sign_links .btn:first-child{margin-bottom: 25px;}
+
+
+/* -------- sign In ---------- */
+.main-tt{
+    color: #fff;
+    font-size: 32px;
+    line-height: 52px;
+    margin-bottom: 116px;
+}
+.sign_In .main-tt{margin-bottom: 10px;}
+.sign_In .page{margin-bottom: 116px; display: block;}
+.sign_In{
+    height: 100vh;
+    background: url(../images/sign_in_bg.jpg)no-repeat center;
+    background-size: cover;
+    padding-top: 92px;
+    box-sizing: border-box;
+}
+
+[class^="sign"] form label{display: none;}
+[class^="sign"] form input{
+    width: 100%; height: 50px; color: #fff;
+    background-color: rgba(238,238,238,.4);
+    padding: 0 20px;
+    box-sizing: border-box;
+    border: none;
+    outline: none; font-size: 16px; line-height: 50px;
+
+}
+[class^="sign"] form input::placeholder{color: #fff;}
+
+[class^="sign"] form p:not(:last-child){margin-bottom: 25px;}
+
+
+[class^="sign"] .signin_links{margin-top: 20px;}
+[class^="sign"] .signin_links a{
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 13px; line-height: 13px;
+
+}
+[class^="sign"] .signin_links a:first-child{
+    margin-bottom: 25px;
+}
+
+/* 
+[attr]  ==>'attr'속성이 포함된 요소를 선택 
+[attr="val"]  ==>'attr'속성이 정확하게 val과 일치하는 요소를 선택 
+[attr~="val"]  ==>'attr'속성의 값이 val이 포함되는 요소를 선택 
+[attr^="val"]  ==>'attr'속성의 값이 val로 시작하는 요소를 선택 
+[attr$="val"]  ==>'attr'속성의 값이 val로 끝나는 요소를 선택 
+[attr*="val"]  ==>'attr'속성의 값이 val이 포함되는 요소를 선택 
+[attr|="val"]  ==>'attr'속성의 값이 정확하게 val이나 val으로 시작하는 요소를 선택, 클래스명중에서 제일 먼저 나와야한다
+
+*/
+
+/* [class]{background-color: red;}
+[class="container"]{border: 5px solid blue;} */
+/* ~은 단어에서 _를 인식한다. _로 연결한 단어를 하나로 취급한다 */
+/* [class~="links"]{border: 5px solid rgb(87, 238, 5);} 
+[class^="sign"]{border: 5px solid rgb(238, 5, 226);} */
+/* [class$="tt"]{border: 5px solid rgb(5, 215, 238);} */
+/* *은 단어에서 _를 인식하지 않는다.  */
+/* [class*="main"]{border: 5px solid rgb(34, 6, 243);} */
+/*  [class|="sign"]{border: 5px solid red;}  */
+
+/* ****** sign_up ******* */
+.sign_up{height: 100vh;
+background: url(../images/sign_up_bg.jpg)no-repeat center;
+background-size: cover;
+padding-top: 92px;
+box-sizing: border-box;
+}
+
+.sign_up .main-tt{margin-bottom: 10px;}
+.sign_up form{margin-top: 60px;}
+.sign_up .signin_links{margin-top: 25px;}
+
+
+/* ****** shop ******* */
+.shop{
+    background-color: #fff;
+    overflow: hidden;
+    height: 100vh;
+}
+.Top_Product{ 
+    position: relative;
+    padding: 25px 12vw 0 0;}
+.Top_Product img{ width: 100%;}
+
+.Top_Product .info{position: absolute; 
+    left: 50px; bottom: -37px;right: 0;
+background-color: #fff;
+padding: 10px 0 10px 20px;
+/* 그림자
+글자 text-shadow: ;
+영역 box-shadow: x y blur spread color ; //blur spread는 생략가능*/
+box-shadow:0 0 8px rgba(0,0,0,.25) ;
+
+}
+.Top_Product .info h2{font-size: 18px;
+    color: #757575;line-height: 29px;
+    margin-bottom: 5px;
+}
+.Top_Product .info .desc{display: flex;justify-content: space-between;}
+.Top_Product .info .desc .price{color: #7e57c2;}
+.Top_Product .info .desc .rate{display: flex;gap:5px;
+padding-right: 45px;
+}
+.Top_Product .info .desc .rate i{color: #7e57c2;}
+
+.shop_product{position:relative; margin-top: 74px; left: 25px;
+width: 120%;
+height: 330px;
+}
+.shop_product .product_list{}
+.shop_product .product_list img{width: 100%;}
+.shop_product .product_list .slick-slide{padding-right: 25px;}
+.shop_product .product_list .slick-track{}
+.shop_product .product_list h3{color:#757575; 
+    font-size: 15px;margin-top: 15px; line-height: 25px;}
+.shop_product .product_list h4{color: #7E57C2; 
+    font-size: 13px;margin-top: 5px; line-height: 25px;}
+
+.shop .page{color: #222; 
+    right: 30px; top: 10px;
+    position: relative;
+    font-size: 20px;
+    
+}
+
+
+
+
+/* **********shop_Categories************** */
+
+.shop_Categories{
+    position: relative;
+    width: 100;    
+    }
+
+.shop_Categories .slick-slide{
+    height: 50vw;
+    min-height: 200px;  max-height: 400px;}
+    
+
+.shop_Categories .slick-slide img{ 
+    width: 100vw ;height: 100%;min-height: 200px;}
+    
+
+
+
+
+.shop_Categories .slick-dots{position: absolute;
+left: 0;width: 100%;bottom: 15px; text-align: center;}
+.shop_Categories .slick-dots li{display: inline;margin-left: 10px;}
+.shop_Categories .slick-dots li:last-child{margin-right: 0;}
+.shop_Categories .slick-dots li button{
+    width: 13px;height: 13px;
+    border: 3px solid #7E57C2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: none;
+    font-size: 0;
+    
+}
+.shop_Categories .slick-dots .slick-active button{
+background-color: #7E57C2;
+}
+
+
+.shopCategories .shop_wrap{
+    padding: 25px 25px 0;
+}
+.shopCategories .shop_wrap ul{
+    display: flex; gap: 25px;flex-wrap: wrap;}
+
+.shopCategories .shop_wrap ul li{width: 45%; flex-grow: 1;}
+.shopCategories .shop_wrap ul li img{width: 100%;display: block;}
+.shopCategories .shop_wrap ul li h4{
+    font-size: 18px;line-height: 25px;
+    padding: 15px 0 0 0;}
+.shopCategories .shop_wrap ul li h5{
+    font-size: 13px;line-height: 21px;
+}
+
+
+.shopCategories .page{position: absolute;
+top: 50px;left:  30px;}
+
+
+/* ***********singleproduct*************** */
+
+
+.singleproduct{
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.singleproduct main{
+    padding: 25px 25px 0;
+}
+
+.singleproduct main h2{font-size: 18px;
+    color: #757575;line-height: 29px;}
+.singleproduct main .rate{margin-bottom: 20px;}
+.singleproduct main .rate i{
+    color: #7e57c2; line-height: 21px;
+}
+
+.singleproduct main .single_product{width: 190%;position: relative;}
+.singleproduct main .single_product img{width: 100%;}
+
+.single_product .slick-slide{padding-right: 25px;}
+
+.single_product .slick-dots{position: absolute;
+    left: 50%;transform: translateX(-50%);
+    }
+.single_product .slick-dots li{display: inline; margin-right: 5px;}
+.single_product .slick-dots li:last-child{margin-right: 0;}
+.single_product .slick-dots li button{
+    width: 7px;height: 7px;
+    border: 1px solid #7E57C2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: none;
+    font-size: 0;
+    
+}
+
+.single_product .slick-dots .slick-active button{
+    background-color: #7E57C2;
+    }
+
+
+
+.details_info{}
+.details_info h3{font-size: 26px;
+    color: #757575;line-height: 26px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    }
+.details_info p{font-size: 13px;
+    color: #757575;line-height: 21px;
+    margin-bottom: 20px;
+}
+
+
+.details_info form{margin-bottom: 20px;}
+
+
+.details_info form label{}
+.details_info form select{
+    width: 100px;height: 25px;
+    font-size: 10px;
+    line-height: 23px;
+    color: #999;
+    border: 1px solid #999;
+    border-radius: 0%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    margin-right: 25px;
+}
+
+.singleproduct .btn{
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+    outline:none; 
+    border: none;
+    margin-top: 25px;
+    width: calc(100% - 50px);
+}

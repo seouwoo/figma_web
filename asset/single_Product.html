@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="singleproduct">
+        <header>
+        <img src="./images/menu_Icon_left.svg" alt="menu_Icon_left" class="menu_Icon_left">
+        <h2>Product Details</h2>
+        <img src="./images/menu_Icon_right.svg" alt="menu_Icon_right" class="menu_Icon_right">
+    </header>
+    <main>
+        <h2>Modern T-shirt for Women</h2>
+        <div class="rate">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="single_product">
+            <div><img src="./images/product_detail_01.jpg" alt="detail01"></div>
+            <div><img src="./images/product_detail_02.jpg" alt="detail02"></div>
+            <div><img src="./images/product_detail_01.jpg" alt="detail01"></div>
+            <div><img src="./images/product_detail_02.jpg" alt="detail02"></div>
+        </div><!-- single_product -->
+        <div class="details_info">
+            <h3>$21.99</h3>
+            <p>Look stunning with this modern t-shirt. Its comfortable and attractive.</p>
+
+            <form action="#">
+                <label for="color"></label>
+                <select name="color" id="color">
+                    <option value="">colors</option>
+                    <option value="blue">blue</option>
+                    <option value="red">red</option>
+                    <option value="silver">silver</option>
+                </select>
+
+                <label for="Size"></label>
+                <select name="Size" id="Size">
+                    <option value="">Sizes</option>
+                    <option value="XL">XL</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="S">S</option>
+                    <option value="XS">XS</option>
+                </select>
+                <input type="submit" value="Add to Cart" class="btn">
+
+                <!-- ???좌우 고치기 -->
+            </form>
+        </div><!-- details_info -->
+    </main>
+
+    </div>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        
+        $(document).ready(function () {
+            $('.single_product').slick({
+                arrows:false,
+                dots:true,
+                //autoplay:true,
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            });
+        });
+    </script>
+</body>
+
+</html>
