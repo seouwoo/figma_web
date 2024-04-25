@@ -173,9 +173,11 @@ height: 330px;
     font-size: 13px;margin-top: 5px; line-height: 25px;}
 
 .shop .page{color: #222; 
-    right: 30px; top: 10px;
-    position: relative;
+    right: 20px;
+    top: 60px;
+    position: absolute;
     font-size: 20px;
+    z-index: 10;
     
 }
 
@@ -219,6 +221,7 @@ background-color: #7E57C2;
 }
 
 
+.shopCategories{background-color: #fff;}
 .shopCategories .shop_wrap{
     padding: 25px 25px 0;
 }
@@ -236,7 +239,8 @@ background-color: #7E57C2;
 
 
 .shopCategories .page{position: absolute;
-top: 50px;left:  30px;}
+    top: 55px;
+    left: 26px;}
 
 
 /* ***********singleproduct*************** */
@@ -315,7 +319,7 @@ top: 50px;left:  30px;}
 
 .singleproduct .btn{
     position: absolute;
-    bottom: 25px;
+    bottom: 10px;
     left: 25px;
     right: 25px;
     outline:none; 
